@@ -159,7 +159,7 @@ type NetOption struct {
 
 // Custom InetDiagReqV2
 // NetDump returns network socket information.
-func (d *Diag) CustomNetDump(header *InetDiagReqV2, opt *NetOption) ([]NetObject, error) {
+func (d *Diag) CustomNetDump(header *InetDiagReqV2) ([]NetObject, error) {
 	respMsgs, err := d.dumpQuery(header)
 	if err != nil {
 		return nil, err
