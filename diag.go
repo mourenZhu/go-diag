@@ -150,6 +150,7 @@ func extractAttributes(data []byte, info *NetAttribute) error {
 		err := unmarshalStruct(data, tcpInfo)
 		multiError = errorsJoin(multiError, err)
 		info.TcpInfo = tcpInfo
+
 		//switch uint16(*info.Protocol) {
 		//case unix.IPPROTO_TCP:
 		//	tcpInfo := &TcpInfo{}
